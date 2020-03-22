@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="style.css>"
+</head>
+<body>
+    <div id="inicio">
+    <h1>Seja bem vindo(a)!</h1>
+        <input id = "nome" value= "Qual o seu nome?" type=”text”></input>
+        <button  onclick="nome();">Enviar </button>
+        <p id = ola></p>
+    </div>
+    <div id="jogo">
+        <button  id=sim onclick="sim();">Sim </button>
+        <button  id=nao onclick="nao();">Não </button>
+        <p id=resposta ></p>
+    </div>
+    <div id="tema">
+        <button  id=desenho onclick="desenho();">Desenho </button>
+        <button  id=comida onclick="comida();">Comida </button>
+        <p id=começar ></p>
+    </div>
+    <div id="perguntas">
+    <input type="text"  name="perg" id="perg" size="30" maxlength="30">
+    <input type="button" id="botao" onclick="enviar();" value= "ENVIAR">
+    <h2 id="msg"> </h2>
+    </div>
+    
+ <script type="text/javascript"src=app.js>
+</script>
+
+
+</body>
+</html>
