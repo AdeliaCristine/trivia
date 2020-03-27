@@ -5,31 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia</title>
-    <link rel="stylesheet" href="style.css>"
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="inicio">
-    <h1>Seja bem vindo(a)!</h1>
-        <input id = "nome" value= "Qual o seu nome?" type=”text”></input>
-        <button  onclick="nome();">Enviar </button>
-        <p id = ola></p>
-    </div>
-    <div id="jogo">
-        <button  id=sim onclick="sim();">Sim </button>
-        <button  id=nao onclick="nao();">Não </button>
-        <p id=resposta ></p>
-    </div>
-    <div id="tema">
-        <button  id=desenho onclick="desenho();">Desenho </button>
-        <button  id=comida onclick="comida();">Comida </button>
-        <p id=começar ></p>
-    </div>
-    <div id="perguntas">
-    <input type="text"  name="perg" id="perg" size="30" maxlength="30">
-    <input type="button" id="botao" onclick="enviar();" value= "ENVIAR">
-    <h2 id="msg"> </h2>
-    </div>
+    <img src="sinal-de-neon-quiz_1262-19629.jpg"
     
+    <div id="inicio">
+    <h1 id="in" class="letra">Seja bem vindo(a)!</h1>
+        <input id = "nome" value= "Qual o seu nome?" type=”text”></input>
+        <button  id="botao" class="bt" onclick="nome();">Enviar </button>
+        <p id =ola class="letra"></p>
+    </div>
+  
+    <div id="jogo"class="jogo">
+        <button  id=sim class="bt" onclick="sim();">Sim </button>
+        <button  id=nao class="bt" onclick="nao();">Não </button>
+        <p id=resposta class="letra"></p>
+     </div>
+    <div id="tema" >
+        <button  id=desenho class="bt" onclick="desenho();">Desenho </button>
+        <button  id=comida class="bt" onclick="comida();">Comida </button>
+    
+        
+    
+    <div id=tema1>
+        <h2>Primeira pergunta: <br> "Qual o nome da namorada do Mickey?</h2>
+        <label for="resp1">
+            <input type="radio" id="e1" name="resp1"> Pateta
+        </label>
+        <label for="resp2">
+            <input type="radio" id="c1" name="resp2"> Minnie
+        </label>
+        <label for="resp3">
+            <input type="radio" id="e2" name="resp3"> Margarida
+        </label>
+        <p id="resultado-2"></p>
+        <h2>Segunda pergunta: <br> Quem era o dono do cofre de moedas de ouro?</h2>
+        <label for="respostas-2">
+            <input type="radio" id="e3" name="respostas-2"> Tio Patinha
+        </label>
+        <label for="respostas-2">
+            <input type="radio" id="c2" name="respostas-2"> Pluto
+        </label>
+        <label for="respostas-2">
+            <input type="radio" id="e4" name="respostas-2"> Huguinho
+        </label>
+        <p id="resultado-2"></p>
+        
+        <h2>Terceira pergunta: <br> Quem tem medo de água?</h2>
+        
+        <label for="respostas-3">
+            <input type="radio" id="e5" name="respostas-3"> Monica
+        </label>
+        <label for="respostas-3">
+            <input type="radio" id="c3" name="respostas-3"> Anjinho
+        </label>
+        <label for="respostas-3">
+            <input type="radio" id="e6" name="respostas-3"> Cascão
+        </label>
+        <p id="resultado-3"></p>
+        <button  id=env1 class="bt" onclick="env1();">Enviar </button>
+    </div>
+    <div id=tema2>
+        <h2>Primeira pergunta: <br> "Qual dessas é uma raiz?</h2>
+        <label for="respostas-4">
+            <input type="radio" id="e7" name="respostas-4"> Batata
+        </label>
+        <label for="respostas-4">
+            <input type="radio" id="c4" name="respostas-4"> Ovo
+        </label>
+        <label for="respostas-4">
+            <input type="radio" id="e8" name="respostas-4"> Uva
+        </label>
+        <p id="resultado-5"></p>
+        <h2>Segunda pergunta: <br> Qual é derivado de leite?</h2>
+        <label for="respostas-5">
+            <input type="radio" id="e9" name="respostas-5"> Queijo
+        </label>
+        <label for="respostas-5">
+            <input type="radio" id="c5" name="respostas-5"> Leite de coco
+        </label>
+        <label for="respostas-5">
+            <input type="radio" id="e10" name="respostas-5"> Maça
+        </label>
+        <p id="resultado-5"></p>
+        
+        <h2>Terceira pergunta: <br> Laranja é?</h2>
+        
+        <label for="respostas-6">
+            <input type="radio" id="e11" name="respostas-6"> Legume
+        </label>
+        <label for="respostas-6">
+            <input type="radio" id="c6" name="respostas-6"> Fruta
+        </label>
+        <label for="respostas-6">
+            <input type="radio" id="e12" name="respostas-6"> Castanha
+        </label>
+        <p id="resultado-6"></p>
+        <button  id=env2 class="bt" onclick="env2();">Enviar </button>
+    </div>
+   
+   </div>
+   <section id="final">
+         <div  id=corretas>
+            <h2 >Respostas Corretas</h2>
+                 <p id=1> </p>
+                 <p id=2> </p>
+                 <p id=3> </p>
+         </div>
+        <div id=incorretas>
+            <h2 >Respotas Incorretas</h2>
+                <p id=4> </p>
+                <p id=5> </p>
+                <p id=6> </p>
+         </div>
+        
+    </section>
+<div id=recomeçar >
+    <button class="bt"  id="jn"onclick="jogar();">Jogar Novamente. </button>
+    <button class="bt"  id="sair" onclick="sair();">Sair </button>
+    <h2 class="letra" id=joga></h2>
+</div>
  <script type="text/javascript"src=app.js>
 </script>
 
