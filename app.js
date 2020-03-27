@@ -53,9 +53,7 @@ function jogar(){
     document.getElementById("sair").style.display="none";
     document.getElementById("final").style.display="none";
     document.getElementById("tema").style.display="block";
-    repeat function sim(){
-
-    
+   
 }
 function sair(){
   window.close();
